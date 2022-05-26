@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <!-- sprite -->
+    <svg style="display: none;">
+        <symbol id="facebook" viewBox="0 0 30 30">
+            <g>
+                <path
+                    d="M17.5 23.75H23.75V6.25H6.25V23.75H15V17.5H12.5V15H15V12.9325C15 11.2612 15.175 10.655 15.5 10.0437C15.8201 9.43898 16.315 8.94461 16.92 8.625C17.3975 8.36875 17.9912 8.215 19.0287 8.14875C19.44 8.1225 19.9725 8.155 20.6262 8.24875V10.6237H20C18.8538 10.6237 18.38 10.6775 18.0975 10.8288C17.9289 10.9154 17.7917 11.0527 17.705 11.2213C17.555 11.5038 17.5 11.7838 17.5 12.9313V15H20.625L20 17.5H17.5V23.75ZM5 3.75H25C25.3315 3.75 25.6495 3.8817 25.8839 4.11612C26.1183 4.35054 26.25 4.66848 26.25 5V25C26.25 25.3315 26.1183 25.6495 25.8839 25.8839C25.6495 26.1183 25.3315 26.25 25 26.25H5C4.66848 26.25 4.35054 26.1183 4.11612 25.8839C3.8817 25.6495 3.75 25.3315 3.75 25V5C3.75 4.66848 3.8817 4.35054 4.11612 4.11612C4.35054 3.8817 4.66848 3.75 5 3.75Z" />
+            </g>
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 30 30">
+            <g>
+                <path
+                    d="M19.125 6.93752C18.175 6.93736 17.2629 7.31017 16.5849 7.97573C15.907 8.64129 15.5174 9.54639 15.5 10.4963L15.465 12.465C15.463 12.5707 15.4386 12.6748 15.3935 12.7704C15.3484 12.866 15.2836 12.9511 15.2033 13.0199C15.1231 13.0887 15.0292 13.1398 14.9278 13.1697C14.8264 13.1997 14.7198 13.2079 14.615 13.1938L12.6638 12.9288C10.0963 12.5788 7.63627 11.3963 5.27627 9.43002C4.52877 13.5675 5.98877 16.4338 9.50502 18.645L11.6888 20.0175C11.7925 20.0827 11.8787 20.1724 11.9398 20.2786C12.0009 20.3848 12.0351 20.5044 12.0393 20.6269C12.0435 20.7493 12.0176 20.871 11.9639 20.9811C11.9102 21.0913 11.8303 21.1866 11.7313 21.2588L9.74127 22.7125C10.925 22.7863 12.0488 22.7338 12.9813 22.5488C18.8788 21.3713 22.8 16.9338 22.8 9.61377C22.8 9.01627 21.535 6.93752 19.125 6.93752ZM13 10.45C13.0218 9.24508 13.3986 8.07336 14.0832 7.08155C14.7678 6.08974 15.7298 5.32192 16.8487 4.87423C17.9676 4.42654 19.1937 4.31887 20.3735 4.56471C21.5532 4.81054 22.6343 5.39895 23.4813 6.25627C24.37 6.25002 25.1263 6.47502 26.8175 5.45002C26.3988 7.50002 26.1925 8.39002 25.3 9.61377C25.3 19.1663 19.4288 23.8113 13.4713 25C9.38627 25.815 3.44627 24.4763 1.74377 22.6988C2.61127 22.6313 6.13627 22.2525 8.17377 20.7613C6.45002 19.625 -0.411226 15.5875 4.09752 4.73252C6.21377 7.20377 8.36002 8.88627 10.535 9.77877C11.9825 10.3725 12.3375 10.36 13.0013 10.4513L13 10.45Z" />
+            </g>
+        </symbol>
+        <symbol id="linkedin" viewBox="0 0 30 30">
+            <g>
+                <path
+                    d="M5 3.75H25C25.3315 3.75 25.6495 3.8817 25.8839 4.11612C26.1183 4.35054 26.25 4.66848 26.25 5V25C26.25 25.3315 26.1183 25.6495 25.8839 25.8839C25.6495 26.1183 25.3315 26.25 25 26.25H5C4.66848 26.25 4.35054 26.1183 4.11612 25.8839C3.8817 25.6495 3.75 25.3315 3.75 25V5C3.75 4.66848 3.8817 4.35054 4.11612 4.11612C4.35054 3.8817 4.66848 3.75 5 3.75ZM6.25 6.25V23.75H23.75V6.25H6.25ZM9.375 11.25C8.87772 11.25 8.40081 11.0525 8.04917 10.7008C7.69754 10.3492 7.5 9.87228 7.5 9.375C7.5 8.87772 7.69754 8.40081 8.04917 8.04917C8.40081 7.69754 8.87772 7.5 9.375 7.5C9.87228 7.5 10.3492 7.69754 10.7008 8.04917C11.0525 8.40081 11.25 8.87772 11.25 9.375C11.25 9.87228 11.0525 10.3492 10.7008 10.7008C10.3492 11.0525 9.87228 11.25 9.375 11.25ZM8.125 12.5H10.625V21.875H8.125V12.5ZM15 13.0375C15.73 12.3313 16.5825 11.875 17.5 11.875C20.0888 11.875 21.875 13.9738 21.875 16.5625V21.875H19.375V16.5625C19.375 15.9823 19.1445 15.4259 18.7343 15.0157C18.3241 14.6055 17.7677 14.375 17.1875 14.375C16.6073 14.375 16.0509 14.6055 15.6407 15.0157C15.2305 15.4259 15 15.9823 15 16.5625V21.875H12.5V12.5H15V13.0375Z" />
+            </g>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 30 30">
+            <g>
+                <path
+                    d="M15 11.25C14.0054 11.25 13.0516 11.6451 12.3483 12.3483C11.6451 13.0516 11.25 14.0054 11.25 15C11.25 15.9946 11.6451 16.9484 12.3483 17.6517C13.0516 18.3549 14.0054 18.75 15 18.75C15.9946 18.75 16.9484 18.3549 17.6517 17.6517C18.3549 16.9484 18.75 15.9946 18.75 15C18.75 14.0054 18.3549 13.0516 17.6517 12.3483C16.9484 11.6451 15.9946 11.25 15 11.25ZM15 8.75C16.6576 8.75 18.2473 9.40848 19.4194 10.5806C20.5915 11.7527 21.25 13.3424 21.25 15C21.25 16.6576 20.5915 18.2473 19.4194 19.4194C18.2473 20.5915 16.6576 21.25 15 21.25C13.3424 21.25 11.7527 20.5915 10.5806 19.4194C9.40848 18.2473 8.75 16.6576 8.75 15C8.75 13.3424 9.40848 11.7527 10.5806 10.5806C11.7527 9.40848 13.3424 8.75 15 8.75ZM23.125 8.4375C23.125 8.8519 22.9604 9.24933 22.6674 9.54235C22.3743 9.83538 21.9769 10 21.5625 10C21.1481 10 20.7507 9.83538 20.4576 9.54235C20.1646 9.24933 20 8.8519 20 8.4375C20 8.0231 20.1646 7.62567 20.4576 7.33265C20.7507 7.03962 21.1481 6.875 21.5625 6.875C21.9769 6.875 22.3743 7.03962 22.6674 7.33265C22.9604 7.62567 23.125 8.0231 23.125 8.4375ZM15 5C11.9075 5 11.4025 5.00875 9.96375 5.0725C8.98375 5.11875 8.32625 5.25 7.71625 5.4875C7.17375 5.6975 6.7825 5.94875 6.36625 6.36625C5.97501 6.74425 5.67419 7.20573 5.48625 7.71625C5.24875 8.32875 5.1175 8.985 5.0725 9.96375C5.0075 11.3438 5 11.8263 5 15C5 18.0925 5.00875 18.5975 5.0725 20.0362C5.11875 21.015 5.25 21.6737 5.48625 22.2825C5.69875 22.8263 5.94875 23.2175 6.36375 23.6325C6.785 24.0525 7.17625 24.3037 7.71375 24.5112C8.33125 24.75 8.98875 24.8825 9.96375 24.9275C11.3438 24.9925 11.8263 25 15 25C18.0925 25 18.5975 24.9912 20.0362 24.9275C21.0138 24.8812 21.6725 24.75 22.2825 24.5138C22.8237 24.3025 23.2175 24.0513 23.6325 23.6362C24.0538 23.215 24.305 22.8238 24.5125 22.2863C24.75 21.67 24.8825 21.0112 24.9275 20.0362C24.9925 18.6562 25 18.1737 25 15C25 11.9075 24.9912 11.4025 24.9275 9.96375C24.8812 8.98625 24.75 8.32625 24.5125 7.71625C24.3241 7.20625 24.0238 6.74495 23.6337 6.36625C23.2559 5.97481 22.7944 5.67396 22.2837 5.48625C21.6712 5.24875 21.0138 5.1175 20.0362 5.0725C18.6562 5.0075 18.1737 5 15 5ZM15 2.5C18.3962 2.5 18.82 2.5125 20.1525 2.575C21.4837 2.6375 22.39 2.84625 23.1875 3.15625C24.0125 3.47375 24.7075 3.90375 25.4025 4.5975C26.0381 5.22237 26.5299 5.97824 26.8438 6.8125C27.1525 7.60875 27.3625 8.51625 27.425 9.8475C27.4838 11.18 27.5 11.6038 27.5 15C27.5 18.3962 27.4875 18.82 27.425 20.1525C27.3625 21.4837 27.1525 22.39 26.8438 23.1875C26.5308 24.0222 26.0389 24.7783 25.4025 25.4025C24.7775 26.0379 24.0216 26.5297 23.1875 26.8438C22.3912 27.1525 21.4837 27.3625 20.1525 27.425C18.82 27.4838 18.3962 27.5 15 27.5C11.6038 27.5 11.18 27.4875 9.8475 27.425C8.51625 27.3625 7.61 27.1525 6.8125 26.8438C5.97791 26.5306 5.22191 26.0387 4.5975 25.4025C3.96176 24.7777 3.46991 24.0218 3.15625 23.1875C2.84625 22.3912 2.6375 21.4837 2.575 20.1525C2.51625 18.82 2.5 18.3962 2.5 15C2.5 11.6038 2.5125 11.18 2.575 9.8475C2.6375 8.515 2.84625 7.61 3.15625 6.8125C3.46905 5.97772 3.961 5.22165 4.5975 4.5975C5.22209 3.96154 5.97804 3.46966 6.8125 3.15625C7.61 2.84625 8.515 2.6375 9.8475 2.575C11.18 2.51625 11.6038 2.5 15 2.5Z" />
+            </g>
+        </symbol>
+    </svg>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="header__logo" href="#">
+                    <img src="images/logo.svg" alt="logo" class="header__logo-icon">
+                </a>
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#">
+                                Our Pertners
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#">
+                                Our Team
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="social">
+                        <ul class="social__list">
+                            <li class="social__item">
+                                <a class="social__link" href="#">
+                                    <svg class="social__link-icon">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="#">
+                                    <svg class="social__link-icon">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="#">
+                                    <svg class="social__link-icon">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="#">
+                                    <svg class="social__link-icon">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <span class="social__privacy">
+                            Privacy Policy
+                        </span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="main">
+            <section class="top">
+                <div class="container">
+                    <div class="top__inner">
+                        <div class="top__info">
+                            <h1 class="top__info-title">
+                                Email marceting for fast-growing startups
+                            </h1>
+                            <p class="top__info-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id ut cursus dictum purus enim
+                                in in urna, suspendisse. Mauris, mollis sed sed ac.
+                            </p>
+                            <div class="top__info-btns">
+                                <a class="top__info-btn" href="#">
+                                    Start Now
+                                </a>
+                                <a class="top__info-btn" href="#">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="partners">
+                <div class="container">
+                    <div class="partners__inner">
+                        <h3 class="partners__title">
+                            Our Partners
+                        </h3>
+                        <div class="partners__row">
+                            <div class="partners__info">
+                                <div class="partners__info-item active" id="tab_1">
+                                    <div class="partners__info-title">
+                                        <img class="partners__info-img" src="images/avatar.png" alt="avatar">
+                                        <div class="partners__info-author">
+                                            <span class="partners__info-name">
+                                                Tom Dou
+                                            </span>
+                                            <span class="partners__info-position">
+                                                Front-End
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="partners__info-text">
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. At pretium id viverra
+                                        interdum nam odio ultricies. Diam leo, sed neque dui pulvinar condimentum
+                                        pretium. At pretium id viverra interdum nam odio ultricies. Diam leo, sed neque
+                                        dui pulvinar condimentum pretium.”
+                                    </p>
+                                </div>
+                                <div class="partners__info-item" id="tab_2">
+                                    <div class="partners__info-title">
+                                        <img class="partners__info-img" src="images/avatar.png" alt="avatar">
+                                        <div class="partners__info-author">
+                                            <span class="partners__info-name">
+                                                Tom Dou
+                                            </span>
+                                            <span class="partners__info-position">
+                                                Front-End
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="partners__info-text">
+                                        “Breck Partners Lorem ipsum dolor sit amet, consectetur adipiscing elit. At
+                                        pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar
+                                        condimentum pretium. At pretium id viverra interdum nam odio ultricies. Diam
+                                        leo, sed neque dui pulvinar condimentum pretium.”
+                                    </p>
+                                </div>
+                                <div class="partners__info-item" id="tab_3">
+                                    <div class="partners__info-title">
+                                        <img class="partners__info-img" src="images/avatar.png" alt="avatar">
+                                        <div class="partners__info-author">
+                                            <span class="partners__info-name">
+                                                Tom Dou
+                                            </span>
+                                            <span class="partners__info-position">
+                                                Front-End
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="partners__info-text">
+                                        “Sunstone Partners Lorem ipsum dolor sit amet, consectetur adipiscing elit. At
+                                        pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar
+                                        condimentum pretium. At pretium id viverra interdum nam odio ultricies. Diam
+                                        leo, sed neque dui pulvinar condimentum pretium.”
+                                    </p>
+                                </div>
+                                <div class="partners__info-item" id="tab_4">
+                                    <div class="partners__info-title">
+                                        <img class="partners__info-img" src="images/avatar.png" alt="avatar">
+                                        <div class="partners__info-author">
+                                            <span class="partners__info-name">
+                                                Tom Dou
+                                            </span>
+                                            <span class="partners__info-position">
+                                                Front-End
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="partners__info-text">
+                                        “Athena Consultants Lorem ipsum dolor sit amet, consectetur adipiscing elit. At
+                                        pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar
+                                        condimentum pretium. At pretium id viverra interdum nam odio ultricies. Diam
+                                        leo, sed neque dui pulvinar condimentum pretium.”
+                                    </p>
+                                </div>
+                                <div class="partners__info-item" id="tab_5">
+                                    <div class="partners__info-title">
+                                        <img class="partners__info-img" src="images/avatar.png" alt="avatar">
+                                        <div class="partners__info-author">
+                                            <span class="partners__info-name">
+                                                Tom Dou
+                                            </span>
+                                            <span class="partners__info-position">
+                                                Front-End
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="partners__info-text">
+                                        “The Chord Company Lorem ipsum dolor sit amet, consectetur adipiscing elit. At
+                                        pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar
+                                        condimentum pretium. At pretium id viverra interdum nam odio ultricies. Diam
+                                        leo, sed neque dui pulvinar condimentum pretium.”
+                                    </p>
+                                </div>
+                                <div class="partners__info-item" id="tab_6">
+                                    <div class="partners__info-title">
+                                        <img class="partners__info-img" src="images/avatar.png" alt="avatar">
+                                        <div class="partners__info-author">
+                                            <span class="partners__info-name">
+                                                Tom Dou
+                                            </span>
+                                            <span class="partners__info-position">
+                                                Front-End
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="partners__info-text">
+                                        “Freshly Lorem ipsum dolor sit amet, consectetur adipiscing elit. At pretium id
+                                        viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar
+                                        condimentum pretium. At pretium id viverra interdum nam odio ultricies. Diam
+                                        leo, sed neque dui pulvinar condimentum pretium.”
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="partners__tabs-box">
+                                <div class="partners__tab-btn active" data-tab="#tab_1">
+                                    <img class="partners__tab-img" src="images/partners/partner1.png" alt="partner1">
+                                </div>
+                                <div class="partners__tab-btn" data-tab="#tab_2">
+                                    <img class="partners__tab-img" src="images/partners/partner2.png" alt="partner2">
+                                </div>
+                                <div class="partners__tab-btn" data-tab="#tab_3">
+                                    <img class="partners__tab-img" src="images/partners/partner3.png" alt="partner3">
+                                </div>
+                                <div class="partners__tab-btn" data-tab="#tab_4">
+                                    <img class="partners__tab-img" src="images/partners/partner4.png" alt="partner4">
+                                </div>
+                                <div class="partners__tab-btn" data-tab="#tab_5">
+                                    <img class="partners__tab-img" src="images/partners/partner5.png" alt="partner5">
+                                </div>
+                                <div class="partners__tab-btn" data-tab="#tab_6">
+                                    <img class="partners__tab-img" src="images/partners/partner6.png" alt="partner6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="team">
+                <div class="container">
+                    <div class="team__inner">
+                        <h3 class="team__title">
+                            Our Team
+                        </h3>
+                        <div class="team__row">
+                            <div class="team__info">
+                                <h5 class="team__info-title">
+                                    About
+                                </h5>
+                                <p class="team__info-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nullam ac sed eget.
+                                    Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed
+                                    eget. Dui in eget a tristique.
+                                </p>
+                            </div>
+                            <div class="team__gallery">
+                                <div class="team__tab-nav">
+                                    <input class="team__tab-radio" type="radio" id="team_1" name="tabs" checked>
+                                    <label class="team__tab-btn" for="team_1" data-tab="#team_tab_1">
+                                        Team 1
+                                        <span></span>
+                                    </label>
+                                    <input class="team__tab-radio" type="radio" id="team_2" name="tabs">
+                                    <label class="team__tab-btn" for="team_2" data-tab="#team_tab_2">
+                                        Team 2
+                                        <span></span>
+                                    </label>
+                                    <input class="team__tab-radio" type="radio" id="team_3" name="tabs">
+                                    <label class="team__tab-btn" for="team_3" data-tab="#team_tab_3">
+                                        Team 3
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="team__swiper active" id="team_tab_1">
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team1.png" alt="team1">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team2.png" alt="team2">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team3.png" alt="team3">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team4.png" alt="team4">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Jane Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team1.png" alt="team1">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team2.png" alt="team2">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team2.png" alt="team2">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-prev">
+                                        <img src="images/arrow-left.svg" alt="arrow-prev">
+                                    </div>
+                                    <div class="swiper-button-next">
+                                        <img src="images/arrow-right.svg" alt="arrow-next">
+                                    </div>
+                                    <div class="swiper-scrollbar"></div>
+                                </div>
+                                <div class="team__swiper" id="team_tab_2">
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team2.png" alt="team2">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team1.png" alt="team1">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team3.png" alt="team3">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team4.png" alt="team4">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Jane Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team1.png" alt="team1">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team2.png" alt="team2">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team2.png" alt="team2">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-prev">
+                                        <img src="images/arrow-left.svg" alt="arrow-prev">
+                                    </div>
+                                    <div class="swiper-button-next">
+                                        <img src="images/arrow-right.svg" alt="arrow-next">
+                                    </div>
+                                    <div class="swiper-scrollbar"></div>
+                                </div>
+                                <div class="team__swiper" id="team_tab_3">
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team3.png" alt="team3">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team1.png" alt="team1">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team2.png" alt="team2">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team4.png" alt="team4">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Jane Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team1.png" alt="team1">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team2.png" alt="team2">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__slider-item">
+                                                <img class="team__slider-img" src="images/team/team2.png" alt="team2">
+                                                <div class="team__item-info">
+                                                    <span class="team__item-name">
+                                                        Tom Dou
+                                                    </span>
+                                                    <span class="team__item-position">
+                                                        Front-End
+                                                    </span>
+                                                    <a class="team__item-link popup__link" href="#">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-prev">
+                                        <img src="images/arrow-left.svg" alt="arrow-prev">
+                                    </div>
+                                    <div class="swiper-button-next">
+                                        <img src="images/arrow-right.svg" alt="arrow-next">
+                                    </div>
+                                    <div class="swiper-scrollbar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contacts">
+                <div class="container">
+                    <div class="contacts__inner">
+                        <h3 class="contacts__title">
+                            Contact Us
+                        </h3>
+                        <form class="contacts__form">
+                            <input type="text" class="contacts__form-input" placeholder="Your Name">
+                            <input type="email" class="contacts__form-input" placeholder="Email Address">
+                            <input type="tel" class="contacts__form-input" placeholder="Phone Number">
+                            <div class="contacts__select-wrapp">
+                                <select class="contacts__select">
+                                    <option value="">Choose your job type</option>
+                                    <option value="">type 1</option>
+                                    <option value="">type 2</option>
+                                    <option value="">type 3</option>
+                                </select>
+                            </div>
+                            <textarea class="contacts__form-textarea" placeholder="Message"></textarea>
+                            <div class="contacts__form-btns">
+                                <input class="contacts__hidden-input" type="file">
+                                <button class="contacts__form-upload" type="button"> Upload your CV</button>
+                                <span class="contacts__upload-text"></span>
+                                <button class="contacts__form-submit" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <h3 class="footer__title">
+                        Where You Can Find Us?
+                    </h3>
+                    <div class="footer__row">
+                        <div class="footer__box">
+                            <h6 class="footer__box-title">
+                                Office 1
+                            </h6>
+                            <ul class="footer__box-list">
+                                <li class="footer__box-item address">
+                                    Lasnamae linnaosa, Pae tn 25-47
+                                </li>
+                                <li class="footer__box-item">
+                                    <a class="footer__box-link email" href="mailto:username@mail.com">username@mail.com
+
+                                    </a>
+                                </li>
+                                <li class="footer__box-item">
+                                    <a class="footer__box-link phone" href="tel:3125789075">
+                                        +3125789075
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__box">
+                            <h6 class="footer__box-title">
+                                Office 2
+                            </h6>
+                            <ul class="footer__box-list">
+                                <li class="footer__box-item address">
+                                    Lasnamae linnaosa, Pae tn 25-47
+                                </li>
+                                <li class="footer__box-item">
+                                    <a class="footer__box-link email" href="mailto:username@mail.com">username@mail.com
+
+                                    </a>
+                                </li>
+                                <li class="footer__box-item">
+                                    <a class="footer__box-link phone" href="tel:3125789075">
+                                        +3125789075
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__box">
+                            <h6 class="footer__box-title">
+                                Socials
+                            </h6>
+                            <div class="social">
+                                <ul class="social__list">
+                                    <li class="social__item">
+                                        <a class="social__link" href="#">
+                                            <svg class="social__link-icon">
+                                                <use xlink:href="#facebook"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a class="social__link" href="#">
+                                            <svg class="social__link-icon">
+                                                <use xlink:href="#twitter"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a class="social__link" href="#">
+                                            <svg class="social__link-icon">
+                                                <use xlink:href="#linkedin"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a class="social__link" href="#">
+                                            <svg class="social__link-icon">
+                                                <use xlink:href="#instagram"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <span class="social__privacy">
+                                    Privacy Policy
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <span class="popup__close"></span>
+                <div class="popup__data">
+                    <div class="popup__data-img">
+                        <img src="images/popup-img.png" alt="popup">
+                    </div>
+                    <div class="popup__data-box">
+                        <div class="popup__data-lists">
+                            <ul class="popup__list-q">
+                                <li class="popup__item-q">Name:</li>
+                                <li class="popup__item-q">Position:</li>
+                                <li class="popup__item-q">Phone:</li>
+                                <li class="popup__item-q">Email:</li>
+                            </ul>
+                            <ul class="popup__list-a">
+                                <li class="popup__item-a">Tom Dou</li>
+                                <li class="popup__item-a">Front-End</li>
+                                <li class="popup__item-a">
+                                    <a href="tel:3125789075">+3125789075</a>
+                                </li>
+                                <li class="popup__item-a">
+                                    <a href="mailto:username@mail.com">username@mail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="social__list">
+                            <li class="social__item">
+                                <a class="social__link" href="#">
+                                    <svg class="social__link-icon">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="#">
+                                    <svg class="social__link-icon">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="#">
+                                    <svg class="social__link-icon">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="#">
+                                    <svg class="social__link-icon">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="popup__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

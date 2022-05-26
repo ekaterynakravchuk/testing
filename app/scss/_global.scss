@@ -1,0 +1,198 @@
+html,
+body {
+    height: auto;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.12;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__list {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    &__item + .social__item {
+        margin-left: 15px;
+    }
+    &__link-icon {
+        width: 30px;
+        height: 30px;
+        fill: #fff;
+    }
+    &__privacy {
+        font-size: 16px;
+        font-weight: 300;
+        color: #B1B1B1;
+    }
+}
+.swiper {
+    &-button-prev,
+    &-button-next {
+        margin: 0;
+        top: calc(100% + 60px);
+        right: 0;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #DEDEDE;
+        border-radius: 50%;
+        background-color: #F8F8F8;
+        &::after {
+            content: none;
+        }
+    }
+    &-button-prev {
+        left: auto;
+        right: 80px;
+    }
+    &-horizontal>.swiper-scrollbar {
+        bottom: -82px;
+        width: 80%;
+        height: 1px;
+        background-color: #676767;
+    }
+    &-scrollbar-drag {
+        height: 7px;
+        background: #17191D;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 1px;
+        top: -3px;
+    }
+}
+
+.popup {
+    display: none;
+    z-index: 100;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.63);
+    &.open {
+        display: block;
+    }
+    &__body {
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    &__content {
+        max-width: 725px;
+        background-color: #fff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 20px;
+        position: relative;
+    }
+    &__close {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #F8F8F8;
+        border: 1px solid #DEDEDE;
+        background-image: url(../images/close-icon.svg);
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        background-position: center;
+        top: -10px;
+        right: -10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+    }
+    &__data {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    &__data-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__data-img {
+        max-width: 271px;
+        border: 1px solid #9A9A9A;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-right: 20px;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__data-lists {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    &__list-q {
+        margin-right: 23px;
+    }
+    &__item-q {
+        color: #585858;
+        margin-bottom: 12px;
+        padding: 7px 10px;
+    }
+    &__list-a {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    &__item-a {
+        color: #2C2C2C;
+        font-weight: 300;
+        padding: 7px 10px;
+        background-color: #F4F4F4;
+        border-radius: 7px;
+        margin-bottom: 12px;
+        & a {
+            color: #2C2C2C;
+        }
+    }
+    & .social__list {
+        background-color: #F4F4F4;
+        padding: 5px 10px;
+        border-radius: 7px;
+        align-self: start;
+        margin-bottom: 0;
+    }
+    & .social__link-icon {
+        fill: $accent;
+    }
+    &__text {
+        font-style: 20px;
+        color: #3D3D3D;
+        line-height: 1.45;
+    }
+}
+
+// .container-fluid {
+//     max-width: 1920px;
+//     padding: 0 10px;
+//     margin: 0 auto;
+// }
