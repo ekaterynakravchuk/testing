@@ -4,6 +4,10 @@ body {
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.12;
 }
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
 
 .wrapper {
     display: flex;
