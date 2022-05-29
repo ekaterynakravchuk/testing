@@ -109,7 +109,7 @@ const swiper = new Swiper('.team__swiper', {
         el: '.swiper-scrollbar',
         draggable: true
     },
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 20,
     breakpoints: {
         890: {

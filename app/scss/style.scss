@@ -188,13 +188,14 @@
         font-size: 24px;
         color: #fff;
         padding: 18px 87px;
-        background-color: $accent;
-        border: 1px solid $accent;
         border-radius: 36px;
         margin: 0 30px;
-        &:last-child {
-            background-color: transparent;
-            border: 1px solid #fff;
+        background-color: transparent;
+        border: 1px solid #fff;
+        transition: all .3s;
+        &:hover {
+            background-color: $accent;
+            border: 1px solid $accent;
         }
     }
 }
@@ -391,7 +392,6 @@
         height: 25px;
         border-radius: 50%;
         border: 3px solid $black;
-        transition: all .1s;
         &::after {
             content: '';
             position: absolute;
@@ -402,7 +402,6 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(0);
-            transition: all .1s;
         }
     }
     &__gallery {
@@ -509,6 +508,10 @@
             font-weight: 300;
             color: #585858;
         }
+        &:-webkit-autofill {
+            transition: background-color 5000s ease-in-out 0s;
+            background-color: transparent;
+        }
     }
     &__select-wrapp {
         max-width: 430px;
@@ -560,6 +563,7 @@
         padding: 17px 52px 17px 86px;
         position: relative;
         cursor: pointer;
+        transition: all .3s;
         &::before {
             content: '';
             position: absolute;
@@ -572,6 +576,9 @@
             top: 50%;
             transform: translateY(-50%);
             left: 52px;
+        }
+        &:hover {
+            background-color: #9A9A9A;
         }
     }
     &__form-submit {
@@ -639,6 +646,7 @@
     & .phone {
         padding-left: 39px;
         position: relative;
+        transition: all .3s;
         &::before {
             content: '';
             position: absolute;
@@ -649,6 +657,9 @@
             background-size: contain;
             top: 0;
             left: 0;
+        }
+        &:hover {
+            color: $accent;
         }
     }
     & .address::before {
@@ -665,6 +676,10 @@
     }
     & .social__link-icon {
         fill: $accent;
+        transition: all .3s;
+        &:hover {
+            fill: #fff;
+        }
     }
     & .social__privacy {
         font-size: 18px;
