@@ -324,6 +324,9 @@
             max-width: 108px;
             max-height: 108px;
         }
+        &__info {
+            width: 100%;
+        }
         &__info-text {
             font-size: 20px;
         }
@@ -541,6 +544,51 @@
     .popup {
         &__content {
             max-width: 335px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .top {
+        &__info-btn {
+            padding: 18px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .partners {
+        &__tabs-box {
+            grid-gap: 10px;
+        }
+    }
+    .team {
+        &__tab-btn {
+            padding: 8px 8px 8px 30px;
+            font-size: 16px;
+        }
+        &__tab-btn span {
+            width: 17px;
+            height: 17px;
+            left: 10px;
+            &::after {
+                width: 8px;
+                height: 8px;
+            }
+        }
+        &__slider-item {
+            width: 275px;
+        }
+    }
+    .contacts {
+        &__form-upload {
+            font-size: 19px;
+            &::before {
+                left: 50px;
+            }
+        }
+        &__form-submit {
+            font-size: 20px;
+            padding: 18px;
         }
     }
 }

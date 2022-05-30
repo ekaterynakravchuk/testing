@@ -128,6 +128,11 @@ body::-webkit-scrollbar {
         right: -10px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
         cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            background-color: #DEDEDE;
+            ;
+        }
     }
     &__data {
         display: flex;
@@ -176,6 +181,9 @@ body::-webkit-scrollbar {
         margin-bottom: 12px;
         & a {
             color: #2C2C2C;
+            &:hover {
+                color: $accent;
+            }
         }
     }
     & .social__list {
@@ -187,12 +195,20 @@ body::-webkit-scrollbar {
     }
     & .social__link-icon {
         fill: $accent;
+        transition: all .3s;
+        &:hover {
+            fill: $black;
+        }
     }
     &__text {
         font-style: 20px;
         color: #3D3D3D;
         line-height: 1.45;
     }
+}
+
+.scroll-lock {
+    overflow: hidden;
 }
 
 // .container-fluid {
